@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  h1= title
+  .row
+    .col-12.col-md-3
+      ul
+        li
+          a(href='1') Rick Sanchez
+        li
+          a(href='2') Morty Smith
+        li
+          a(href='3') Summer Smith
+        li
+          a(href='4') Beth Smith
+        li
+          a(href='5') Jerry Smith
+        li
+          a(href='6') Abadango Cluster Princess
+        li
+          a(href='7') Abradolf Lincler
+        li
+          a(href='8') Adjudicator Rick
+        li
+          a(href='9') Agency Director
+        li
+          a(href='10') Alan Rails
+        li
+          a(href='11') Albert Einstein
+        li
+          a(href='12') Alexander
+        li
+          a(href='13') Alien Googah
+        li
+          a(href='14') Alien Morty
+        li
+          a(href='15') Alien Rick
+        li
+          a(href='16') Amish Cyborg
+        li
+          a(href='17') Annie
+        li
+          a(href='18') Antenna Morty
+        li
+          a(href='19') Antenna Rick
+        li
+          a(href='20') Ants in my Eyes Johnson
+  script.
+    let form = document.querySelector('li');
+    let button = document.querySelector('a');
+    button.addEventListener('click', () => {
+      let value = document.querySelector('href').value;
+      let url = '/personaje/' + value;
+      window.location.href=url;
+    })
+
+
