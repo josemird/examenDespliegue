@@ -7,11 +7,8 @@ block content
             .card(style='width: 18rem;')
                 img.card-img-top(src=personaje.image alt='...')
                 .card-body
-                h5.card-title
-                    = personaje.name
-                p.card-text
-                    = personaje.gender
-                p.card-text
-                    = personaje.created
-                a.card-link(href='#') Card link
-                a.card-link(href='#') Another link
+                h5.card-title #{personaje.name}
+                p.card-text #{personaje.gender}
+                p.card-text #{new Date(personaje.created).toString()}
+                a.card-link(href=`${personaje.url}`) Descargar su ficha (JSON)
+                a.card-link(href='/') Lista completa

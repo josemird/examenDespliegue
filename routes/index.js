@@ -3,8 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Lista Completa' });
+  try {
+    res.redirect("/personaje/todos")
+  } catch (error) {
+    res.status(500).send('Error al obtener la lista de personajes.');
+  }
 });
-
 
 module.exports = router;
